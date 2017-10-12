@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from scipy.misc import imread
 # 中文情况下，只有通过分词才能产生词云
 import jieba
-import jieba.analyse as analyse
+# import jieba.analyse as analyse
 import os
 
 class FilmcloudPipeline(object):
@@ -20,7 +20,6 @@ class FilmcloudPipeline(object):
 
         print item
 
-        # 生成词云
         # 分词
         cut_text = " ".join(jieba.cut(item['summary']))
         # cut_text = " ".join(analyse.extract_tags(item['summary'], topK=20, withWeight=False))
